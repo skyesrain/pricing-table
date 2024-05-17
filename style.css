@@ -1,0 +1,78 @@
+/* Write your CSS code here */
+:root{
+  --primary-color: background: rgb(238, 174, 202);
+   background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 230, 233, 1) 100%);;
+  --secondary-color:rgba(238, 174, 202, 1);
+  --tertiary-color:rgb(174, 240, 241);
+  --last-color:rgb(250, 220, 183);
+}
+
+*html,body{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+   background:var(--primary-color);
+   font-family:"roboto" sans-serif;
+   line-height: 1.2;
+   
+
+}
+.main-container{
+   max-width: 800px;
+   margin:auto;
+   height: 40vh;
+   background:#fff;
+   border:20px solid #f3f3f3;
+   border-radius: 15px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-items: center;
+   align-items: center;
+   margin-top:10rem;
+   overflow: none;
+   padding:0 30px
+   
+}
+.container{
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows:3fr;
+   overflow: none;
+   padding:0 10px;
+}
+.container .btn{
+   display:inline-block;
+   border: none;
+   text-decoration: none;
+   text-align: center;
+   padding:1rem 0;
+   margin-top:8px;
+   width:50%;
+   border-radius: 10px;
+}
+.container:nth-child(1) .btn{
+   background: var(--secondary-color);
+}
+.container:nth-child(2) .btn{
+   background: var(--tertiary-color);
+}
+.container:nth-child(3) .btn{
+   background: var(--last-color);
+}
+
+/* resposiveness */
+@media(max-width:600px ){
+   .main-container{
+       grid-template-columns: 1fr;
+       height: 100vh;
+       margin: auto;
+       
+   }
+   .container{
+       justify-self: start;
+
+   }
+  .container .btn {
+       width: 100%;
+   }
+}
